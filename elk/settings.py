@@ -89,7 +89,7 @@ INSTALLED_APPS = [
     'django_countries',
     'django_markdown',
     'django_user_agents',
-    'social.apps.django_app.default',
+    'social_django',
     'timezone_field',
     'django_nose',
     'django.contrib.admindocs',
@@ -110,7 +110,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
     'raven.contrib.django.raven_compat.middleware.SentryResponseErrorIdMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -155,8 +155,8 @@ TEMPLATES = [
 
                 'elk.context_processors.greeting',  # current customer greeting template
 
-                'social.apps.django_app.context_processors.backends',
-                'social.apps.django_app.context_processors.login_redirect',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
 
             ],
         },
@@ -179,20 +179,20 @@ IMAGE_CROPPING_JQUERY_URL = None
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'social.backends.google.GoogleOAuth2',
-    'social.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
 )
 SOCIAL_AUTH_PIPELINE = (
-    'social.pipeline.social_auth.social_details',
-    'social.pipeline.social_auth.social_uid',
-    'social.pipeline.social_auth.auth_allowed',
-    'social.pipeline.social_auth.social_user',
-    'social.pipeline.user.get_username',
-    'social.pipeline.social_auth.associate_by_email',
-    'social.pipeline.user.create_user',
-    'social.pipeline.social_auth.associate_user',
-    'social.pipeline.social_auth.load_extra_data',
-    'social.pipeline.user.user_details',
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.social_auth.associate_by_email',
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
     'acc.pipelines.save_profile_picture',
     'acc.pipelines.save_country',
     'acc.pipelines.save_timezone',
@@ -200,6 +200,7 @@ SOCIAL_AUTH_PIPELINE = (
     'acc.pipelines.add_trial_lesson',
     'acc.pipelines.notify_staff',
 )
+SOCIAL_AUTH_GOOGLE_OAUTH2_USE_DEPRECATED_API = True
 
 DEBUG_TOOLBAR_CONFIG = {
     # 'JQUERY_URL': '/static/vendor/jquery/dist/jquery.min.js',

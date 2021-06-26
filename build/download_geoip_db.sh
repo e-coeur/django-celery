@@ -3,8 +3,12 @@
 # Downloads maxmind database from http://dev.maxmind.com/geoip/legacy/geolite/
 #
 
+mkdir geolite
+
 cd geolite
 
-wget -N http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz
+curl "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=SET_YOUR_LICENSE_KEY&suffix=tar.gz" -o GeoLite2-Country.tar.gz
 
-gunzip -kqf GeoLite2-City.mmdb.gz
+tar xvzf GeoLite2-Country.tar.gz --strip-components 1
+
+rm GeoLite2-Country.tar.gz

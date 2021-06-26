@@ -21,7 +21,7 @@ django-countries==6.1.2
 -e git+https://github.com/f213/django-suit-daterange-filter@a9d9c2e118f0006ca0fa842febbe0922fba75518#egg=django_date_range_filter
 django-debug-toolbar==1.6
 django-environ==0.4.1
-django-filter==1.1
+django-filter==1.1.0
 django-image-cropping==1.0.3
 django-mail-templated==2.6.2
 django-markdown-app==0.8.5.1
@@ -52,7 +52,7 @@ isort==4.2.5
 jedi==0.17.1
 kombu==4.6.11
 lxml==4.5.1
-Markdown==2.6.6
+Markdown==3.3.4
 maxminddb==1.2.1
 mccabe==0.5.0
 mixer==5.5.7
@@ -74,9 +74,9 @@ pycodestyle==2.0.0
 pycparser==2.20
 pyflakes==1.2.3
 Pygments==2.6.1
-PyJWT==1.4.2
+PyJWT==2.1.0
 python-dateutil==2.5.3
-python-social-auth==0.2.19
+python-social-auth==0.3.6
 python3-openid==3.0.10
 pytz==2016.10
 PyYAML==5.3.1
@@ -90,8 +90,8 @@ selenium==2.53.5
 simplegeneric==0.8.1
 simplejson==3.8.2
 six==1.10.0
-social-auth-app-django==0.0.1
-social-auth-core==3.3.3
+social-auth-app-django==4.0.0
+social-auth-core==4.1.0
 sortedcontainers==1.5.4
 sqlparse==0.2.2
 stripe==1.44.0
