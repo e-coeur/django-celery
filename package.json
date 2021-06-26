@@ -23,7 +23,7 @@
     "stylus": "^0.54.5"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^3.9.1"
   },
   "scripts": {
     "test": "echo \"No tests yet, sorry\" && exit 0"
